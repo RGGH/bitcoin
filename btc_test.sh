@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export ARCH=x86_64
-export BITCOIN_VERSION=0.23.0
+export BITCOIN_VERSION=23.0
 export BITCOIN_URL=https://bitcoincore.org/bin/bitcoin-core-${BITCOIN_VERSION}/bitcoin-${BITCOIN_VERSION}-${ARCH}-linux-gnu.tar.gz
 export BITCOIN_SIGNATURE=F4FC70F07310028424EFC20A8E4256593F177720
 export BITCOIN_DATA=/blockchain
