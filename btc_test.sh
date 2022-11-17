@@ -16,8 +16,8 @@ wget -qO bitcoin-${BITCOIN_VERSION}-${ARCH}-linux-gnu.tar.gz ${BITCOIN_URL}
 gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys ${BITCOIN_SIGNATURE}
 gpg --verify SHA256SUMS.asc
 
-grep bitcoin-${BITCOIN_VERSION}-${ARCH}-linux-gnu.tar.gz SHA256SUMS.asc > SHA256SUM
-sha256sum -c SHA256SUM
+cat SHA256SUMS.asc | grep bitcoin-${BITCOIN_VERSION}-${ARCH}-linux-gnu.tar.gz | awk '{ print $1 }'
+
 sudo tar -xzvf bitcoin-${BITCOIN_VERSION}-${ARCH}-linux-gnu.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt
 sudo rm -rf /tmp/*
 sudo mkdir -p ${BITCOIN_DATA}/.bitcoin
