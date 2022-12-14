@@ -1,6 +1,7 @@
 # Bitcoin
 
 ## Script to set up bitcoin core
+run `btc_test.sh`
 
 ## Change version to suit
 ---
